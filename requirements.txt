@@ -1,59 +1,39 @@
-# Core Flask and production server
 Flask==3.0.0
 Werkzeug==3.0.1
 gunicorn==21.2.0
-gevent==23.9.1  # For better async performance in production
-uvicorn==0.27.0  # Alternative ASGI server for better performance
+gevent==23.9.1
+uvicorn==0.27.0
 
-# Async support
 aiohttp==3.9.1
-# asyncio is part of the Python 3 standard library; do NOT install the PyPI "asyncio" package for modern Python versions.
 
-# Web scraping
 beautifulsoup4==4.12.2
 lxml==4.9.3
 html5lib==1.1
 
-# Image processing
 Pillow==10.1.0
 pytesseract==0.3.10
 
-# Google APIs
 google-generativeai==0.3.2
 google-api-python-client==2.108.0
 google-cloud-firestore==2.14.0
 
-# SerpAPI for reverse image search
 google-search-results==2.4.2
 
-# Requests and HTTP
 requests==2.31.0
 urllib3==2.1.0
 
-# Environment variables
 python-dotenv==1.0.0
 
-# Utilities
 python-dateutil==2.8.2
 pytz==2023.3
 
-# Production monitoring and performance
-prometheus-client==0.19.0  # For metrics
-python-json-logger==2.0.7  # Structured JSON logging
-sentry-sdk[flask]==1.39.1  # Error tracking
-newrelic==9.7.0  # Application performance monitoring
+prometheus-client==0.19.0
+python-json-logger==2.0.7
+sentry-sdk[flask]==1.39.1
+newrelic==9.7.0
 
-# Cache and rate limiting
-redis==5.0.1  # For caching and rate limiting
+redis==5.0.1
 python-redis-rate-limit==0.0.9
 
-# Security
-flask-talisman==1.1.0  # Security headers
-flask-cors==4.0.0  # CORS support
-
-# System dependency: pytesseract requires the Tesseract OCR engine to be installed on the OS.
-# On Debian/Ubuntu: sudo apt update && sudo apt install -y tesseract-ocr libtesseract-dev
-
-# Note: For production deployment on Google Cloud Run or App Engine,
-# ensure your instance has enough memory (at least 2GB) for running
-# machine learning models and image processing tasks.
+flask-talisman==1.1.0
+flask-cors==4.0.0
