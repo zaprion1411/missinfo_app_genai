@@ -5,4 +5,4 @@ aptPkgs = ["tesseract-ocr", "libtesseract-dev"]
 cmds = ["pip install -r requirements.txt"]
 
 [start]
-cmd = "gunicorn app:app"
+cmd = "python -m gunicorn app:app --workers=1 --threads=2 --timeout=120 --bind 0.0.0.0:$PORT"
